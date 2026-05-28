@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 
 import Header from './components/Header'
 import AddTodo from './components/AddToDo'
+import { sortTodos } from './utils/sortToDos'
+import SortButtons from './components/SortButtons'
 import TodoList from './components/ToDoList'
 import EditModal from './components/EditModal'
 
@@ -32,6 +34,10 @@ export default function App() {
   const [difficulty, setDifficulty] = useState<number>(5)
   const [time, setTime] = useState<number>(5)
   const [frog, setFrog] = useState<boolean>(false)
+
+  const [sortMode, setSortMode] = useState('added')
+
+  const sortedTodos = sortTodos(todos, sortMode)
 
   const [editingTodo, setEditingTodo] = useState<Todo | null>(null)
 
@@ -132,8 +138,12 @@ export default function App() {
             setFrog={setFrog}
             addTodo={addTodo}
           />
+          <SortButtons
+            sortMode={sortMode}
+            setSortMode={setSortMode}
+          />
           <TodoList
-            todos={todos}
+            todos={sortedTodos}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
             setEditingTodo={setEditingTodo}

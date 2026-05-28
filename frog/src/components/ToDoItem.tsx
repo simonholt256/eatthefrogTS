@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 type Todo = {
   idNum: string
   text: string
@@ -28,11 +30,17 @@ export default function TodoItem({
   deleteTodo,
   setEditingTodo
 }: TodoItemProps) {
+
+  const [showMore, setShowMore] = useState(false)
+
   return (
     <div className={`item-box ${todo.completed ? 'completed' : ''}`}>
       <div className="list-item">
 
-        <div className="item-text-box">
+        <div
+            className="item-text-box"
+            onClick={() => setShowMore(!showMore)}
+          >
           <img
             className={todo.frog ? 'frog-img' : 'asterisk-img'}
             src={todo.frog ? frogPic : asterisk}
@@ -52,7 +60,7 @@ export default function TodoItem({
         </button>
 
       </div>
-      <div className='more-box'>
+      <div className={`more-box ${showMore ? 'show' : ''}`}>
         <div>Tedium: {todo.tedium}</div>
         <div>Difficulty: {todo.difficulty}</div>
         <div>Time: {todo.time}</div>
