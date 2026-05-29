@@ -22,8 +22,8 @@ function arrangeTodos(todos: Todo[], order: string): Todo[] {
     return [...todos].sort(
       (a, b) =>
         b.difficulty - a.difficulty ||
-        b.time - a.time ||
-        b.tedium - a.tedium
+        b.tedium - a.tedium ||
+        b.time - a.time
     )
   }
 
@@ -31,8 +31,8 @@ function arrangeTodos(todos: Todo[], order: string): Todo[] {
     return [...todos].sort(
       (a, b) =>
         a.difficulty - b.difficulty ||
-        a.time - b.time ||
-        a.tedium - b.tedium
+        a.tedium - b.tedium ||
+        a.time - b.time
     )
   }
 
@@ -40,8 +40,8 @@ function arrangeTodos(todos: Todo[], order: string): Todo[] {
     return [...todos].sort(
       (a, b) =>
         a.time - b.time ||
-        a.tedium - b.tedium ||
-        a.difficulty - b.difficulty
+        a.difficulty - b.difficulty ||
+        a.tedium - b.tedium 
     )
   }
 
