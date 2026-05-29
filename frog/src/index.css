@@ -2,7 +2,7 @@
 
 :root {
   --bg: #e9f8ff;
-  --bg-second: #ddffec85;
+  --bg-second: #f1fff785;
   --bold-one: green;
   --bold-two: #72a072;
   --text: black;
@@ -117,7 +117,7 @@ h2 {
   left: 12px;
   opacity: 0;
   transition: opacity 0.2s ease;
-  filter: invert(0.4);
+  filter: invert(0.45);
 }
 .plus-img.visible {
   opacity: 1;
@@ -148,7 +148,7 @@ h2 {
   height: 46px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 8px;
-  filter: invert(0.3);
+  filter: invert(0.4);
 }
 
 .checked-img {
