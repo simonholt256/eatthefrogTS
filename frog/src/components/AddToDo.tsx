@@ -95,6 +95,7 @@ export default function AddTodo({
                   min="1"
                   max="10"
                   onChange={(e) => setTedium(Number(e.target.value))}
+                  className='slider'
                 />
               </div>
 
@@ -107,6 +108,7 @@ export default function AddTodo({
                   min="1"
                   max="10"
                   onChange={(e) => setDifficulty(Number(e.target.value))}
+                  className='slider'
                 />
               </div>
 
@@ -119,6 +121,7 @@ export default function AddTodo({
                   min="1"
                   max="10"
                   onChange={(e) => setTime(Number(e.target.value))}
+                  className='slider'
                 />
               </div>
 

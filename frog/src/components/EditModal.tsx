@@ -27,7 +27,8 @@ export default function EditModal({
     <div className="edit-modal-backdrop">
       <div className="edit-box">
 
-        <div className="input-div">
+        <div className="input-div edit-input-div">
+          {/* <div>Edit Box</div> */}
 
           <div className="input-text-frog">
 
@@ -84,6 +85,7 @@ export default function EditModal({
                       tedium: Number(e.target.value)
                     })
                   }
+                  className='slider'
                 />
               </div>
 
@@ -101,6 +103,7 @@ export default function EditModal({
                       difficulty: Number(e.target.value)
                     })
                   }
+                  className='slider'
                 />
               </div>
 
@@ -118,6 +121,7 @@ export default function EditModal({
                       time: Number(e.target.value)
                     })
                   }
+                  className='slider'
                 />
               </div>
 

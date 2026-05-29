@@ -4,7 +4,7 @@
   --bg: #e9f8ff;
   --bg-second: #ddffec85;
   --bold-one: green;
-  --bold-two: #72a072a9;
+  --bold-two: #72a072;
   --text: black;
   --card: #f8ffea;
   --card-hover: #fbffd4;
@@ -58,15 +58,15 @@ body {
     min-width: 400px;
     max-width: 800px;
     margin-top: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 16px;
     border-radius: 20px;
     background-color: var(--bg-second);
     border: solid 1px var(--outer-border);
 }
 
 #themeToggle {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 10px;
   margin: 10px 10px 0px 0px;
   display: flex;
@@ -233,6 +233,25 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   align-items: center;
 }
 
+.slider {
+  width: 100px;
+  appearance: none;
+  outline: solid 1px var(--outer-border);
+  border-radius: 10px;
+  height: 10px;
+  margin: 4px;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width:16px;
+  height: 8px;
+  outline: solid 2px green;
+  background: var(--bold-two);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .add-to-list-box {
   width: 100%;
   display: flex;
@@ -310,15 +329,16 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
 }
 
 .item-box {
-  background-color: var(--card);
-  border: solid 1px var(--outer-border);
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 1px rgba(0, 0, 0, 0);
   border-radius: 16px;
-  margin: 8px 8px;
+  margin: 0px 8px;
   /* box-shadow: 4px 4px 0px rgba(83, 93, 233, 0.438); */
 }
 
 .item-box:hover {
-  background-color: var(--card-hover);
+  background-color: var(--card);
+  border: solid 1px var(--outer-border);
 }
 
 .item-box.completed {
@@ -393,9 +413,12 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   z-index: 1000;
 }
 
+
 .edit-input-div {
   width: 90%;
-  max-width: 500px;
+  min-width: 400px;
+  /* width: 700px;
+  border: solid 1px black; */
 
   /* background: var(--bg);
   color: var(--text);
