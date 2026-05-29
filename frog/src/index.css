@@ -2,15 +2,17 @@
 
 :root {
   --bg: #e9f8ff;
-  --bg-second: #ddffec;
+  --bg-second: #ddffec85;
   --bold-one: green;
   --bold-two: #72a072a9;
   --text: black;
   --card: #f8ffea;
   --card-hover: #fbffd4;
   --bg-textbox: white;
-  --outer-border: #000000e5;
+  --outer-border: #0000004f;
   --inner-border: #000000e5;
+  --glow: #ccf3ff;
+  --glow-hover: #b0edff;
 }
 
 .dark-mode {
@@ -20,9 +22,12 @@
   --bold-two: #686868a9;
   --text: white;
   --card: #1e1e1e;
+  --card-hover: #424242;
   --bg-textbox: #242424;
   --outer-border: #9e9e9ea6;
   --inner-border: #9e9e9ea6;
+  --glow: #5e5e5e;
+  --glow-hover: #747474;
 }
 
 * {
@@ -52,7 +57,11 @@ body {
     width: 94%;
     min-width: 400px;
     max-width: 800px;
-    background-color: var(--bg-second)
+    margin-top: 16px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    background-color: var(--bg-second);
+    border: solid 1px var(--outer-border);
 }
 
 #themeToggle {
@@ -65,14 +74,6 @@ body {
   align-items: center;
 }
 
-h2 {
-    
-    
-    text-align: center;
-    background-color: var(--bold-two);
-}
-
-
 /* Header */
 
 .header-div {
@@ -83,6 +84,7 @@ h2 {
 
 .header-box {
     background-color: var(--bold-one);
+    border-radius: 18px 18px 0px 0px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -93,6 +95,12 @@ h2 {
     margin-left: 20px;
     width: 60%;
     background-color: var(--bold-one);
+}
+
+h2 {
+    text-align: center;
+    background-color: var(--bold-two);
+    border-radius: 0px 0px 20px 0px;
 }
 
 
@@ -229,6 +237,7 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   width: 100%;
   display: flex;
   justify-content: end;
+  
 }
 
 .add-to-list-button {
@@ -237,31 +246,45 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   font-size: 1rem;
   border: solid 1px black;
   border-radius: 16px;
+  cursor: pointer;
+}
+
+.add-to-list-button:active {
+  background-color: #87c5ff;
 }
 
 /* Order change */
 
 .order-change-buttons {
-  border: solid 1px black;
+  border: solid 1px var(--outer-border);
   margin: 16px 8px;
   padding: 4px;
   border-radius: 16px;
 }
 
 .sort-button {
+  font-size: 1rem;
+  color: var(--text);
   margin: 4px;
-  padding: 4px 8px;
+  padding: 6px 8px 4px 8px;
   border-radius: 8px;
-}
-
-.sort-button {
+  background-color: var(--card);
+  cursor: pointer;
   transition: 0.2s;
 }
 
+.sort-button:hover {
+  background-color: var(--card-hover);
+}
+
 .active-sort {
-  background: #ccf3ff;
+  background: var(--glow);
   box-shadow: 0 0 4px #87c5ff;
   transform: scale(1.03);
+}
+
+.active-sort:hover {
+  background-color: var(--glow-hover);
 }
 
 /* List */
