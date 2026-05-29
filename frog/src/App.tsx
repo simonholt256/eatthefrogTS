@@ -64,7 +64,7 @@ export default function App() {
     }
 
     const newTodo: Todo = {
-      idNum: crypto.randomUUID(),
+      idNum: Date.now().toString(),
       text: input,
       completed: false,
       tedium,
@@ -142,6 +142,7 @@ export default function App() {
             sortMode={sortMode}
             setSortMode={setSortMode}
           />
+          {/* <div>To Do (see list only button that hides everythong else) </div> */}
           <TodoList
             todos={sortedTodos}
             toggleTodo={toggleTodo}
