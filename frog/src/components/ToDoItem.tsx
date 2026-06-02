@@ -21,6 +21,7 @@ import frogPic from '../assets/frogicon.png'
 import asterisk from '../assets/asterisk.png'
 import Unchecked from '../assets/unchecked.png'
 import tickPic from '../assets/tick.png'
+import tick from '../assets/check.png'
 import editPic from '../assets/edit.png'
 import deletePic from '../assets/delete.png'
 
@@ -50,10 +51,12 @@ export default function TodoItem({
         </div>
 
         <button className='checking-button' onClick={() => toggleTodo(todo.idNum)}>
-          <img
-            className={todo.completed ? 'checked-img' : 'unchecked-img'} 
-            src={todo.completed ? tickPic : Unchecked}
-            ></img>
+            <div className='check-box'>
+              <img
+              className={todo.completed ? 'checked-img' : 'unchecked-img'} 
+              src={todo.completed ? tick : ""}
+              ></img>
+            </div>
           {/* {todo.completed && (
             <img className="tick-img" src={tickPic} />
           )} */}
@@ -61,9 +64,9 @@ export default function TodoItem({
 
       </div>
       <div className={`more-box ${showMore ? 'show' : ''}`}>
-        <div>Tedium: {todo.tedium}</div>
-        <div>Difficulty: {todo.difficulty}</div>
-        <div>Time: {todo.time}</div>
+        <div className='rate-item-display'>Tedium: {todo.tedium}</div>
+        <div className='rate-item-display'>Difficulty: {todo.difficulty}</div>
+        <div className='rate-item-display'>Time: {todo.time}</div>
         <div className="item-buttons">
           <button onClick={() => setEditingTodo(todo)} className='icon-button'>
             <img className="icon-img" src={editPic} />

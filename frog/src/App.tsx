@@ -29,6 +29,8 @@ export default function App() {
     return localStorage.getItem('theme') === 'dark'
   })
 
+  const [showOnlyList, setShowOnlyList] = useState(false)
+
   const [input, setInput] = useState<string>('')
   const [tedium, setTedium] = useState<number>(5)
   const [difficulty, setDifficulty] = useState<number>(5)
@@ -125,24 +127,34 @@ export default function App() {
             darkMode={darkMode}
             setDarkMode={setDarkMode}
           />
-          <AddTodo
-            input={input}
-            setInput={setInput}
-            tedium={tedium}
-            setTedium={setTedium}
-            difficulty={difficulty}
-            setDifficulty={setDifficulty}
-            time={time}
-            setTime={setTime}
-            frog={frog}
-            setFrog={setFrog}
-            addTodo={addTodo}
-          />
-          <SortButtons
-            sortMode={sortMode}
-            setSortMode={setSortMode}
-          />
-          {/* <div>To Do (see list only button that hides everythong else) </div> */}
+          <div className={`controls-wrapper ${showOnlyList ? 'hidden' : ''}`}>
+            <AddTodo
+              input={input}
+              setInput={setInput}
+              tedium={tedium}
+              setTedium={setTedium}
+              difficulty={difficulty}
+              setDifficulty={setDifficulty}
+              time={time}
+              setTime={setTime}
+              frog={frog}
+              setFrog={setFrog}
+              addTodo={addTodo}
+            />
+            <SortButtons
+              sortMode={sortMode}
+              setSortMode={setSortMode}
+            />
+          </div>
+          <div className='show-only-list-box'>
+            <div className='to-do-list-title'>To do List</div>
+            <button
+              className='hide-input-boxes'
+              onClick={() => setShowOnlyList(!showOnlyList)}
+            >
+              {showOnlyList ? 'Show controls' : 'Show only list'}
+            </button>
+          </div>
           <TodoList
             todos={sortedTodos}
             toggleTodo={toggleTodo}

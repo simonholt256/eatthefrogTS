@@ -14,7 +14,9 @@ export default function Header({
   return (
     <div className="header-div">
       <div className="header-box">
-        <img className="eat-frog-header" src={headerPic} />
+        <div className='eat-frog-header'>EAT THE FROG</div>
+        
+        {/* <img className="eat-frog-header" src={headerPic} /> */}
 
         <button
           id="themeToggle"
@@ -27,8 +29,9 @@ export default function Header({
           />
         </button>
       </div>
+      <div className='shape'></div>
 
-      <h2 className="header">Get it Done. Get it Did</h2>
+      {/* <h2 className="header">Get it Done. Get it Did</h2> */}
     </div>
   )
 }
