@@ -19,8 +19,8 @@ type TodoItemProps = {
 
 import frogPic from '../assets/frogicon.png'
 import asterisk from '../assets/asterisk.png'
-import Unchecked from '../assets/unchecked.png'
-import tickPic from '../assets/tick.png'
+// import Unchecked from '../assets/unchecked.png'
+// import tickPic from '../assets/tick.png'
 import tick from '../assets/check.png'
 import editPic from '../assets/edit.png'
 import deletePic from '../assets/delete.png'

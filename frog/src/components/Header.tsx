@@ -1,6 +1,6 @@
 import moonPic from '../assets/moon.png'
 import sunPic from '../assets/sun.png'
-import headerPic from '../assets/eatTheFrogTransparent.png'
+// import headerPic from '../assets/eatTheFrogTransparent.png'
 
 type HeaderProps = {
   darkMode: boolean
