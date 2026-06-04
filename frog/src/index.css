@@ -5,6 +5,7 @@
   --bg: #fafdff;
   --bg-second: #fafdff;
   --bold-one: #A6CE9A;
+  --bold-one-hover: #8cc07c;
   --bold-two: #72a072;
   --text: black;
   --card: #f8ffea;
@@ -24,7 +25,8 @@
   --base: rgb(0, 0, 0);
   --bg: #121212;
   --bg-second: #242424;
-  --bold-one: rgb(107, 107, 107);
+  --bold-one: #6b6b6b;
+  --bold-one-hover: #585858;
   --bold-two: #686868a9;
   --text: white;
   --card: #1e1e1e;
@@ -139,8 +141,7 @@ button {
 
 h2 {
     text-align: center;
-    background-color: var(--bold-two);
-    border-radius: 0px 0px 20px 0px;
+    margin-top: 16px;
 }
 
 
@@ -565,4 +566,79 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   gap: 16px;
 
   box-shadow: 0 0 20px rgba(0,0,0,0.3); */
+}
+
+/* How it works */
+
+.how-it-works-button-box {
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.how-it-works-button {
+  position: absolute;
+  width: 112px;
+  background-color: var(--bold-one);
+  color: white;
+  border: solid 1px var(--inner-border);
+  border-radius: 8px;
+  padding: 4px 16px 2px 16px;
+  left: 30px;
+  bottom: -10px;
+  cursor: pointer;
+}
+
+.how-it-works-button:hover {
+  background-color: var(--bold-one-hover);
+}
+
+.how-it-works-box {
+  padding: 0px 32px;
+}
+
+.rating-example {
+  display: flex;
+  justify-content: space-around;
+  margin: 16px 0px;
+}
+
+.add-button-example {
+  background-color: var(--add-button);
+  color: var(--text);
+  margin: 8px 14px 8px 4px;
+  padding: 5px 16px 4px 16px;
+  font-size: 1rem;
+  border-radius: 16px;
+  
+}
+
+.example-frog-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-frog {
+  height: 32px;
+  margin: 0px 12px;
+}
+
+p {
+  margin: 16px 8px;
+}
+
+h3 {
+  margin-top: 16px;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.add-example-img {
+  width: 100%;
+}
+
+body.dark-mode .example-frog-lines {
+  filter: invert(1);
 }

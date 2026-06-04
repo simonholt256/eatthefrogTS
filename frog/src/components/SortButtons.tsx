@@ -20,7 +20,7 @@ export default function SortButtons({
         </button>
 
         <button className={`sort-button ${sortMode === 'snowball' ? 'active-sort' : ''}`} onClick={() => setSortMode('snowball')}>
-          Snow Ball
+          Snowball
         </button>
       </div>
       <div className="change-buttons-bottom">

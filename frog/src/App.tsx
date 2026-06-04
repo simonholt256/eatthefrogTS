@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import Header from './components/Header'
+import HowItWorks from './components/HowItWorks'
 import AddTodo from './components/AddToDo'
 import { sortTodos } from './utils/sortToDos'
 import SortButtons from './components/SortButtons'
@@ -36,6 +37,7 @@ export default function App() {
   const [difficulty, setDifficulty] = useState<number>(5)
   const [time, setTime] = useState<number>(5)
   const [frog, setFrog] = useState<boolean>(false)
+  const [showHowItWorks, setShowHowItWorks] = useState(false)
 
   const [sortMode, setSortMode] = useState('added')
 
@@ -127,41 +129,51 @@ export default function App() {
             darkMode={darkMode}
             setDarkMode={setDarkMode}
           />
-          <div className={`controls-wrapper ${showOnlyList ? 'hidden' : ''}`}>
-            <AddTodo
-              input={input}
-              setInput={setInput}
-              tedium={tedium}
-              setTedium={setTedium}
-              difficulty={difficulty}
-              setDifficulty={setDifficulty}
-              time={time}
-              setTime={setTime}
-              frog={frog}
-              setFrog={setFrog}
-              addTodo={addTodo}
-            />
-            <SortButtons
-              sortMode={sortMode}
-              setSortMode={setSortMode}
-            />
-          </div>
-          <div className='show-only-list-box'>
-            <div className='to-do-list-title'>To do List</div>
-            <button
-              className='hide-input-boxes'
-              onClick={() => setShowOnlyList(!showOnlyList)}
-            >
-              {showOnlyList ? 'Show controls' : 'Show only list'}
+          <div className='how-it-works-button-box'>
+            <button onClick={() => setShowHowItWorks(!showHowItWorks)} className='how-it-works-button'>
+              {showHowItWorks ? 'Back to list' : 'How it works'}
             </button>
           </div>
-          <TodoList
-            todos={sortedTodos}
-            toggleTodo={toggleTodo}
-            deleteTodo={deleteTodo}
-            setEditingTodo={setEditingTodo}
-          />
-
+          {showHowItWorks ? (
+              <HowItWorks />
+            ) : (
+              <>
+                <div className={`controls-wrapper ${showOnlyList ? 'hidden' : ''}`}>
+                  <AddTodo
+                    input={input}
+                    setInput={setInput}
+                    tedium={tedium}
+                    setTedium={setTedium}
+                    difficulty={difficulty}
+                    setDifficulty={setDifficulty}
+                    time={time}
+                    setTime={setTime}
+                    frog={frog}
+                    setFrog={setFrog}
+                    addTodo={addTodo}
+                  />
+                  <SortButtons
+                    sortMode={sortMode}
+                    setSortMode={setSortMode}
+                  />
+                </div>
+                <div className='show-only-list-box'>
+                  <div className='to-do-list-title'>To do List</div>
+                  <button
+                    className='hide-input-boxes'
+                    onClick={() => setShowOnlyList(!showOnlyList)}
+                  >
+                    {showOnlyList ? 'Show controls' : 'Show only list'}
+                  </button>
+                </div>
+                <TodoList
+                  todos={sortedTodos}
+                  toggleTodo={toggleTodo}
+                  deleteTodo={deleteTodo}
+                  setEditingTodo={setEditingTodo}
+                />
+              </>
+            )}
           {editingTodo && (
             <EditModal
               editingTodo={editingTodo}
