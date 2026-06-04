@@ -36,11 +36,6 @@ export default function SortButtons({
           As added
         </button>
       </div>
-
-      
-
-      
-
     </div>
   )
 }

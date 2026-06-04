@@ -51,18 +51,15 @@ export default function TodoItem({
         </div>
 
         <button className='checking-button' onClick={() => toggleTodo(todo.idNum)}>
-            <div className='check-box'>
-              <img
-              className={todo.completed ? 'checked-img' : 'unchecked-img'} 
-              src={todo.completed ? tick : ""}
-              ></img>
-            </div>
-          {/* {todo.completed && (
-            <img className="tick-img" src={tickPic} />
-          )} */}
+          <div className='check-box'>
+            <img
+            className={todo.completed ? 'checked-img' : 'unchecked-img'} 
+            src={todo.completed ? tick : ""}
+            ></img>
+          </div>
         </button>
-
       </div>
+
       <div className={`more-box ${showMore ? 'show' : ''}`}>
         <div className='rate-item-display'>Tedium: {todo.tedium}</div>
         <div className='rate-item-display'>Difficulty: {todo.difficulty}</div>
@@ -77,8 +74,6 @@ export default function TodoItem({
           </button>
         </div>
       </div>
-      
-
     </div>
   )
 }

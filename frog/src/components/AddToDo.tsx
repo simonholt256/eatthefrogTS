@@ -41,7 +41,6 @@ export default function AddTodo({
 
   return (
     <div className="add-todo-cont">
-
       <div className="input-div">
         <img
           className={`plus-img ${!inputFocused ? 'visible' : ''}`}
@@ -135,9 +134,7 @@ export default function AddTodo({
                 Add to list
               </button>
             </div>
-          </div>
-        
-
+          </div>        
       </div>
     </div>
   )

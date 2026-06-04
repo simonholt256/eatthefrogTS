@@ -43,10 +43,10 @@
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -59,20 +59,17 @@ body {
 
 
 .everything-cont {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
     
 }
 
 .everything {
-    width: 100%;
-    max-width: 450px;
-    /* margin-top: 16px; */
-    padding-bottom: 16px;
-    /* border-radius: 20px; */
-    background-color: var(--bg-second);
-    /* border: solid 1px var(--outer-border); */
+  width: 100%;
+  max-width: 450px;
+  padding-bottom: 16px;
+  background-color: var(--bg-second);
 }
 
 #themeToggle {
@@ -105,28 +102,27 @@ button {
 /* Header */
 
 .header-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-box {
-    background-color: var(--bold-one);
-    /* border-radius: 18px 18px 0px 0px; */
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    
+  background-color: var(--bold-one);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
 }
 
 .eat-frog-header {
-    font-size: 2rem;
-    color: white;
-    padding-top: 24px;
-    padding-right: 8px;
+  font-size: 2rem;
+  color: white;
+  padding-top: 24px;
+  padding-right: 8px;
 }
 
 .shape {
@@ -140,8 +136,8 @@ button {
 
 
 h2 {
-    text-align: center;
-    margin-top: 16px;
+  text-align: center;
+  margin-top: 16px;
 }
 
 
@@ -186,7 +182,6 @@ h2 {
 }
 
 .unchecked-img {
-  
   height: 46px;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 8px;
@@ -203,7 +198,6 @@ h2 {
 
 body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecked-img, body.dark-mode .plus-img, body.dark-mode .frog-lines, body.dark-mode .checked-img, body.dark-mode .darkmode-img{
   filter: invert(1);
-  
 }
 
 
@@ -422,7 +416,6 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
 
 
 .list-item {
-  /* border: solid 1px rgb(60, 252, 146); */
   display: grid;
   grid-template-columns: 1fr 50px;
   margin:4px 4px;
@@ -451,13 +444,10 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   background-color: rgba(0, 0, 0, 0);
   border: solid 1px rgba(0, 0, 0, 0);
   border-bottom: dashed 1px var(--inner-border);
-  /* border-radius: 16px; */
   margin: 0px 8px;
-  /* box-shadow: 4px 4px 0px rgba(83, 93, 233, 0.438); */
 }
 
 .item-box:hover {
-  /* background-color: var(--card); */
   border: solid 1px var(--outer-border);
 }
 
@@ -469,8 +459,6 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
 
 .item-text-box {
   background-color: var(--bg-textbox);
-  /* border: solid 1px var(--outer-border);
-  border-radius: 16px; */
   display: flex;
   align-items: center;
   padding: 8px;
@@ -536,13 +524,10 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
 .edit-box {
   position: fixed;
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: rgba(0, 0, 0, 0.5);
-
   z-index: 1000;
 }
 
@@ -551,21 +536,6 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   width: 90%;
   max-width: 450px;
   min-width: 400px;
-  /* width: 700px;
-  border: solid 1px black; */
-
-  /* background: var(--bg);
-  color: var(--text);
-
-  border-radius: 20px;
-
-  padding: 24px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  box-shadow: 0 0 20px rgba(0,0,0,0.3); */
 }
 
 /* How it works */

@@ -26,12 +26,8 @@ export default function EditModal({
   return (
     <div className="edit-modal-backdrop">
       <div className="edit-box">
-
         <div className="input-div edit-input-div">
-          {/* <div>Edit Box</div> */}
-
           <div className="input-text-frog">
-
             <input
               type="text"
               className="todo-input"
@@ -135,11 +131,8 @@ export default function EditModal({
                 Save
               </button>
             </div>
-
           </div>
-
         </div>
-
       </div>
     </div>
   )
