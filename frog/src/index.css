@@ -580,9 +580,10 @@ body.dark-mode .asterisk-img, body.dark-mode .icon-img, body.dark-mode .unchecke
   width: 112px;
   background-color: var(--bold-one);
   color: white;
+  font-size: 1rem;
   border: solid 1px var(--inner-border);
   border-radius: 8px;
-  padding: 4px 16px 2px 16px;
+  padding: 4px 0px 2px 0px;
   left: 30px;
   bottom: -10px;
   cursor: pointer;
